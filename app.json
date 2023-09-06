@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,11 +20,16 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#000000"
+      },
+      "package": "com.gabrielsouzadev.onebitcoin"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "package": "com.onebitcode.onebitcoin",
+    "versionCode": 1,
+    "extra": {
+      "eas": {
+        "projectId": "43ee2662-a77f-44ac-b0f4-bd0f37239d2d"
+      }
     }
   }
 }

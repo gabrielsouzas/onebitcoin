@@ -73,6 +73,12 @@ export default function App() {
   const [coinsGraphicList, setCoinsGraphicList] = useState([0]);
   const [days, setDays] = useState(30);
   const [updateData, setUpdateData] = useState(true);
+  const [price, setPrice] = useState();
+
+  function priceCotation() {
+    // .pop() - Pega o último item da lista
+    setPrice(coinsGraphicList.pop());
+  }
 
   function updateDay(number) {
     setDays(number);
@@ -83,6 +89,8 @@ export default function App() {
     getListCoins(url(days)).then((data)=>{
       setCoinsList(data);
     });
+
+    priceCotation();
 
     getPriceCoinsGraphic(url(days)).then((dataGraphic)=>{
       setCoinsGraphicList(dataGraphic);
@@ -102,7 +110,9 @@ export default function App() {
         barStyle="dark-content"   
       
       />
-      <CurrentPrice />
+      <CurrentPrice 
+        lastCotation={price}
+      />
       <HistoryGraphic 
         infoDataGraphic={coinsGraphicList}
       />
