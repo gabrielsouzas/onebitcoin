@@ -52,12 +52,9 @@ async function getPriceCoinsGraphic(url) {
   try {
     let response = await fetch(url);
     let returnApi = await response.json();
-    
     if ("bpi" in returnApi) {
       let selectListQuotations = returnApi.bpi;
-      const queryCoinsList = Object.keys(selectListQuotations).map((key)=>{
-        selectListQuotations[key]
-      });
+      const queryCoinsList = Object.keys(selectListQuotations).map((key)=> selectListQuotations[key]);
       let dataGraphic = queryCoinsList;
       return dataGraphic;
     } else {
@@ -106,7 +103,9 @@ export default function App() {
       
       />
       <CurrentPrice />
-      <HistoryGraphic />
+      <HistoryGraphic 
+        infoDataGraphic={coinsGraphicList}
+      />
       <QuotationList 
         filterDay={updateDay}
         listTransactions={coinsList}
