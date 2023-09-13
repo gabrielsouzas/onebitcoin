@@ -106,6 +106,30 @@ Para gerar os arquivos necessários para o build do projeto, com a possibilidade
     eas build --platform android
     ```
 
+Ao finalizar o build será mostrado um link com o arquivo .aab para ser baixado e aplicado na Play Store. Mas também é possível encontrar o aplicativo e esse arquivo .aab fazendo login na página do Expo e indo até os seus projetos.
+
+Já para gerar o arquivo .apk é necessário refazer o procedimento de gerar o build, mas dessa vez alterando o arquivo de configuração eas.json.
+
+Insira o atributo **buildType** dendro de **build > preview > android** com o valor **apk**:
+
+    ```json
+    {
+      "build": {
+        "preview": {
+          "android": {
+            "buildType": "apk"
+          }
+        },
+      }
+    }
+    ```
+
+Refaça o build:
+
+    ```cmd
+    eas build -p android --profile preview
+    ```
+
 
 ## Contribuição
 
