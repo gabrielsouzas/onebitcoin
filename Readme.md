@@ -18,24 +18,24 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
 1. Abra o seu prompt favorito, navegue até a pasta onde pretende criar o seu aplicativo e execute o comando abaixo:
 
-   ```bash
+   ```node
    npx create-expo-app onebitcoin
    ```
 
 2. Navegue até o diretório do projeto:
 
-    ```bash
+    ```node
     cd onebitcoin
     ```
 3. Instale as dependências para a criação dos gráficos:
 
-    ```bash
+    ```node
     npm i react-native-chart-kit
     npm i react-native-svg
     ```
 4. Inicie o servidor Expo:
     
-    ```bash
+    ```node
     npx expo start
     ```
 5. Abra o aplicativo Expo Go em seu dispositivo móvel ou siga as instruções no terminal para abrir o aplicativo no emulador.
@@ -84,25 +84,25 @@ Para gerar os arquivos necessários para o build do projeto, com a possibilidade
 
 * Instale o último EAS CLI
 
-    ```
+    ```node
     npm install -g eas-cli
     ```
 
 * Faça login na sua conta Expo
    
-    ```
+    ```node
     expo login
     ```
 
 * Configure o projeto
 
-    ```
+    ```node
     eas build:configure
     ```
 
 * Faça a build
 
-    ```
+    ```node
     eas build --platform android
     ```
 
@@ -112,7 +112,7 @@ Já para gerar o arquivo .apk é necessário refazer o procedimento de gerar o b
 
 Insira o atributo **buildType** dendro de **build > preview > android** com o valor **apk**:
 
-    ```json
+   ```json
     {
       "build": {
         "preview": {
@@ -122,13 +122,13 @@ Insira o atributo **buildType** dendro de **build > preview > android** com o va
         },
       }
     }
-    ```
+   ```
 
 Refaça o build:
 
-    ```cmd
+   ```node
     eas build -p android --profile preview
-    ```
+   ```
 
 
 ## Contribuição
